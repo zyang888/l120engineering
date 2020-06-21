@@ -6,6 +6,7 @@
 :root {
   --color_blue: rgb(0, 45, 74);
   --color_red: rgb(221, 35, 33);
+  --color_grey: rgb(32,40,43);
 }
 
 /*--------------------------------------------------------------
@@ -68,7 +69,7 @@ i {
 }
 
 /*--------------------------------------------------------------
-# Header & jumbotron
+# Header
 --------------------------------------------------------------*/
 header {
   display: flex;
@@ -105,6 +106,23 @@ li:last-child a {
 
 header img {
   width: 400px;
+}
+
+/*--------------------------------------------------------------
+# carouselExampleIndicators
+--------------------------------------------------------------*/
+.carousel img {
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.carousel-caption h5 {
+  font-size: 3rem;
+}
+
+.carousel-caption {
+  bottom: 100px;
 }
 
 /*--------------------------------------------------------------
@@ -172,6 +190,11 @@ section.services {
   text-align: left;
 }
 
+.card h3,
+h2 {
+  margin-bottom: 1rem;
+}
+
 .card a {
   margin-top: auto;
   text-align: left;
@@ -181,9 +204,73 @@ section.services {
 }
 
 .card img {
-  height: 15rem;
+  height: 12rem;
   width: 100%;
   object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/*--------------------------------------------------------------
+# portfolio
+--------------------------------------------------------------*/
+
+section.portfolio {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.portfolio-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.portfolio-card {
+  width: 33.3%;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.portfolio-card img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.overlay {
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: var(--color_grey);
+}
+
+.portfolio-card:hover .overlay {
+  opacity: 0.5;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  width: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-bottom: 2px solid white;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.portfolio-card:hover .text {
+  opacity: 1;
 }
 
 /*--------------------------------------------------------------
@@ -250,23 +337,6 @@ i + p {
 
 ul i {
   vertical-align: middle;
-}
-
-/*--------------------------------------------------------------
-# content
---------------------------------------------------------------*/
-.carousel img {
-  height: 400px;
-  object-fit: cover;
-  filter: brightness(50%);
-}
-
-.carousel-caption h5 {
-  font-size: 3rem;
-}
-
-.carousel-caption {
-  bottom: 100px;
 }
 
 /*--------------------------------------------------------------
