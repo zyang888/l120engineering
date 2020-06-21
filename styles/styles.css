@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+/*--------------------------------------------------------------
+# Color variables
+--------------------------------------------------------------*/
+:root {
+  --color_blue: rgb(0, 45, 74);
+  --color_red: rgb(221, 35, 33);
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  color: var(--color_blue);
+}
+
+a {
+  color: var(--color_blue);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+}
+
+a:hover,
+a:focus {
+  /* background-color: #BD93F2; */
+}
+
+figure {
+  margin: 0;
+}
+
+hr {
+  margin: 0;
+  border: 0;
+  border-top: 10px solid var(--color_red);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+i {
+  width: 1.5rem;
+}
+
+/*--------------------------------------------------------------
+# Header & jumbotron
+--------------------------------------------------------------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+header h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--color_blue);
+}
+
+header section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+header ul {
+  margin-top: auto;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+li:last-child a {
+  padding-right: 0;
+}
+
+header img {
+  width: 400px;
+}
+
+/*--------------------------------------------------------------
+# intro
+--------------------------------------------------------------*/
+
+section.intro {
+  padding: 2rem 0;
+}
+
+.intro img {
+  width: 45%;
+}
+
+.intro div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro article {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro h1 {
+  margin: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.intro p:last-child {
+  margin-top: auto;
+}
+
+hr.intro {
+  border: 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+/*--------------------------------------------------------------
+# service
+--------------------------------------------------------------*/
+
+section.services {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.cardsection {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  border: 0;
+}
+
+.card p {
+  text-align: left;
+}
+
+.card a {
+  margin-top: auto;
+  text-align: left;
+  font-weight: bold;
+  color: var(--color_red);
+  text-decoration: underline;
+}
+
+.card img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer {
+  background-color: var(--color_blue);
+  color: white;
+  padding: 2rem 0;
+}
+
+footer h5 {
+  margin-bottom: 1rem;
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+footer ul {
+  width: 30%;
+  margin-bottom: 2rem;
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--color_red);
+}
+
+.copyright p {
+  display: inline-block;
+}
+
+.copyright img {
+  height: 1rem;
+}
+
+.social {
+  margin-left: auto;
+  text-align: right;
+}
+
+.social img {
+  height: 2rem;
+}
+
+.links {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 100%;
+}
+
+i + p {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+ul i {
+  vertical-align: middle;
+}
+
+/*--------------------------------------------------------------
+# content
+--------------------------------------------------------------*/
+.carousel img {
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.carousel-caption h5 {
+  font-size: 3rem;
+}
+
+.carousel-caption {
+  bottom: 100px;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+.main-container {
+  width: 80%;
+  margin: auto;
+}
+
+.alignright {
+  margin-left: auto;
+  /* margin-left push to the right!!! */
+}
+
+.alignleft {
+  margin-right: auto;
+  /* margin-left push to the right!!! */
+}
+
+.aligncenter {
+  margin: auto;
+}
+
+.textcenter {
+  text-align: center;
+}
