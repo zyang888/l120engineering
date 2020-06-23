@@ -8,12 +8,10 @@ function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     // scroll
     $("#headerlogo").height("70px");
-    $('#headerphone').css('font-size','1rem');
-    $('#navbar').css('font-size','1rem');
+    $('#headerphone').css('font-size','1.1rem');
   } else {
     // initial
     $("#headerlogo").height("100px");
     $('#headerphone').css('font-size','1.3rem');
-    $('#navbar').css('font-size','1.3rem');
   }
 }
