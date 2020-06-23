@@ -6,7 +6,7 @@
 :root {
   --color_blue: rgb(0, 45, 74);
   --color_red: rgb(221, 35, 33);
-  --color_grey: rgb(32,40,43);
+  --color_grey: rgb(32, 40, 43);
 }
 
 /*--------------------------------------------------------------
@@ -68,23 +68,49 @@ i {
   width: 1.5rem;
 }
 
+.btn-red {
+  font-weight: bold;
+  margin-top: 2rem;
+  color: var(--color_red);
+  background-color: white;
+  border-color: var(--color_red);
+  border-radius: 0;
+  width: 10rem;
+  border-width: medium;
+}
+
+.btn-red:hover {
+  color: white;
+  background-color: var(--color_red);
+  border-color: var(--color_red);
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 110;
+}
+
+#headerlogo, #headerphone, #navbar  {
+  transition: 0.8s;
+}
+
+header div {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0;
+  padding: 0.8rem 0;
 }
 
-header p {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-header h2 {
+#headerphone {
+  margin: 0;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: var(--color_blue);
 }
 
@@ -94,23 +120,24 @@ header section {
   align-items: flex-end;
 }
 
-header ul {
+#navbar {
   margin-top: auto;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 li:last-child a {
   padding-right: 0;
 }
 
-header img {
-  width: 400px;
+header a:hover {
+  color: var(--color_red);
 }
 
 /*--------------------------------------------------------------
 # carouselExampleIndicators
 --------------------------------------------------------------*/
+
 .carousel img {
   height: 500px;
   object-fit: cover;
@@ -131,6 +158,8 @@ header img {
 
 section.intro {
   padding: 2rem 0;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .intro img {
@@ -144,8 +173,6 @@ section.intro {
 
 .intro article {
   width: 50%;
-  display: flex;
-  flex-direction: column;
 }
 
 .intro h1 {
@@ -155,7 +182,13 @@ section.intro {
 }
 
 .intro p:last-child {
-  margin-top: auto;
+  margin-top: 1rem;
+}
+
+.intro .btn {
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
 }
 
 hr.intro {
@@ -196,11 +229,9 @@ h2 {
 }
 
 .card a {
-  margin-top: auto;
-  text-align: left;
-  font-weight: bold;
-  color: var(--color_red);
-  text-decoration: underline;
+  margin: auto auto 0;
+  width: 50%;
+
 }
 
 .card img {
@@ -227,15 +258,21 @@ section.portfolio {
   margin-right: -0.5rem;
 }
 
+.portfolio-section::after {
+  content: "";
+  flex: auto;
+}
+
 .portfolio-card {
-  width: 33.3%;
+  width: 50%;
   position: relative;
   padding: 0.5rem;
 }
 
 .portfolio-card img {
   width: 100%;
-  object-fit: contain;
+  height: 15rem;
+  object-fit: cover;
 }
 
 .overlay {
@@ -245,7 +282,7 @@ section.portfolio {
   left: 0.5rem;
   right: 0.5rem;
   opacity: 0;
-  transition: .5s ease;
+  transition: 1s ease;
   background-color: var(--color_grey);
 }
 
@@ -266,7 +303,7 @@ section.portfolio {
   text-align: center;
   border-bottom: 2px solid white;
   opacity: 0;
-  transition: .5s ease;
+  transition: 1s ease;
 }
 
 .portfolio-card:hover .text {
