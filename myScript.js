@@ -1,5 +1,4 @@
-let height = $("#header").offsetHeight;
-$("#content").css('marginTop',height+'px');
+$("#content").css('margin-top',$("#header").css("height"));
 
 // When the user scrolls down 50px from the top of the document, resize the header's font size
 window.onscroll = function() {scrollFunction()};
