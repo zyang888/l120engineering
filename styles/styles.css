@@ -53,12 +53,6 @@ figure {
   margin: 0;
 }
 
-hr {
-  margin: 0;
-  border: 0;
-  border-top: 10px solid var(--color_red);
-}
-
 ul {
   list-style: none;
   padding: 0;
@@ -83,6 +77,12 @@ i {
   color: white;
   background-color: var(--color_red);
   border-color: var(--color_red);
+}
+
+hr {
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid lightgrey;
 }
 
 /*--------------------------------------------------------------
@@ -134,6 +134,11 @@ li:last-child a {
 
 header a:hover {
   color: var(--color_red);
+}
+
+header hr {
+  border-bottom: 0;
+  border-top: 10px solid var(--color_red);
 }
 
 /*--------------------------------------------------------------
@@ -193,10 +198,7 @@ section.intro {
   margin-top: 2rem;
 }
 
-hr.intro {
-  border: 0;
-  border-bottom: 1px solid lightgrey;
-}
+
 
 /*--------------------------------------------------------------
 # service
@@ -316,7 +318,14 @@ section.portfolio {
 # form
 --------------------------------------------------------------*/
 
+.form {
+  text-align: center;
+  padding: 2rem 0;
+}
 
+form {
+  margin-top: 2rem;
+}
 
 /*--------------------------------------------------------------
 # Footer
@@ -390,22 +399,4 @@ ul i {
 .main-container {
   width: 80%;
   margin: auto;
-}
-
-.alignright {
-  margin-left: auto;
-  /* margin-left push to the right!!! */
-}
-
-.alignleft {
-  margin-right: auto;
-  /* margin-left push to the right!!! */
-}
-
-.aligncenter {
-  margin: auto;
-}
-
-.textcenter {
-  text-align: center;
 }

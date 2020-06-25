@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- need new icon -->
   <!-- <link rel="icon" href="images/logo.svg"> -->
-  <title>Seattle Structural Design & Engineering</title>
+  <title>L120 Structural Engineering & Design</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -121,7 +121,7 @@
         </div>
     </section>
 
-    <hr class="intro" />
+    <hr />
 
     <section class="portfolio">
       <div class="main-container">
@@ -162,39 +162,31 @@
       </div>
     </section>
 
-    <hr class="intro" />
+    <hr />
 
-    <section class="main-container">
+    <section class="main-container form">
       <h2>Send us a message</h2>
-      <p>Our engineers will get back to you ASAP. </p>
-      <form>
-
-        <div class="form-group">
-          <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="form-group">
-          <label for="inputAddress2">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      <p>Please use the form below to contact us. Our engineers will get back to you ASAP. We look forward to learning more about you, your project, or anything we can help you with. </p>
+      <form name="contact" method="POST" data-netlify="true">
+        <div class="form-row">
+          <div class="form-group col">
+            <input type="text" class="form-control" id="inputAddress" placeholder="Name">
+          </div>
+          <div class="form-group col">
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
         </div>
         <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity">
+          <div class="form-group col">
+            <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone">
           </div>
-          <div class="form-group col-md-4">
-            <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
+          <div class="form-group col">
+            <input type="text" class="form-control" id="inputCity" placeholder="City">
           </div>
         </div>
-
+        <div class="form-group">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Project Details"></textarea>
+        </div>
         <button type="submit" class="btn btn-red">Submit</button>
       </form>
     </section>
