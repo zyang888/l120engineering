@@ -1,113 +1,153 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
-  <!-- <script src="https://kit.fontawesome.com/25b102b7df.js"></script> -->
-  <title>Archery - Instructors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/icon.png">
+  <title>L120 Structural Engineering & Design</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 
-  <script>
-  // 2. This code loads the IFrame Player API code asynchronously.
-  var tag = document.createElement('script');
-
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  // 3. This function creates an <iframe> (and YouTube player)
-  //    after the API code downloads.
-  var player;
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-      height: '390',
-      width: '640',
-      videoId: 'we7kl5bizC8',
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
-    });
-  }
-
-  // 4. The API will call this function when the video player is ready.
-  function onPlayerReady(event) {
-    event.target.playVideo();
-  }
-
-  // 5. The API calls this function when the player's state changes.
-  //    The function indicates that when playing a video (state=1),
-  //    the player should play for six seconds and then stop.
-  var done = false;
-  function onPlayerStateChange(event) {
-    // if (event.data == YT.PlayerState.PLAYING && !done) {
-    //   setTimeout(stopVideo, 6000);
-    //   done = true;
-    // }
-  }
-  function stopVideo() {
-    player.stopVideo();
-  }
-  </script>
-
-  <header>
-    <div class="header-container aligncenter">
-      <img src="images/logo.png" alt="logo picture">
-      <nav class="alignright header-font">
-        <a href="index.html">Main</a>
-        <a href="instructors.html">Instructors</a>
-        <a href="instructors.html">Contact</a>
-      </nav>
+  <header id="header">
+    <div class="main-container">
+      <img id="headerlogo" src="images/logo.svg" alt="logo">
+      <section>
+        <h5 id="headerphone">FREE CONSULTATION - (425) 636-3313</h5>
+        <ul id="navbar" class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="./index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PORTFOLIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">BLOG</a>
+          </li>
+        </ul>
+      </section>
     </div>
+    <hr />
   </header>
 
-  <div class="textcenter">
-    <div id="player"></div>
+  <div id="content">
+    <section class="main-container profile">
+      <h1>About</h1>
+      <article>
+        <img src="images/mans_thurfjell.png" alt="Mans Thurfjell Profile Picture">
+        <div>
+          <h3><a href="https://forvo.com/word/m%C3%A5ns/" target="_blank">Måns</a> Thurfjell</h3>
+          <h4>Managing Partner/Founder of L120</h4>
+          <p><a href="https://forvo.com/word/m%C3%A5ns/" target="_blank">Måns</a> has over 20 years of Structural Engineering and Construction Administration experience. Since XXXX, Mans has created structural solutions for over 800 buildings and
+            homes in the
+            greater Seattle area. Mans’s
+            experience includes structural systems constructed of concrete, steel, wood, masonry and aluminum.
+
+            Mans has a passion for creating a collaborative environment, and prioritizes responsiveness to his clients, architects, and contractors. Only through dialogue, not just the calculator, can we produce the most cost-effective, buildable
+            structural solutions.
+
+            Mans graduated from Univeristy of Washington with a B.S. degree in Civil Engineering.
+            In XXXX, Mans achieved his Professional Engineer license.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <hr />
+    <section class="main-container team">
+      <h2>Our team</h2>
+      <div class="members" id="members">
+      </div>
+    </section>
+
+    <hr />
+
+    <section class="main-container form">
+      <h2>Send us a message</h2>
+      <p>Please use the form below to contact us. Our engineers will get back to you ASAP. We look forward to learning more about you, your project, or anything we can help you with. </p>
+      <form name="contact" method="POST" data-netlify="true">
+        <div class="form-row">
+          <div class="form-group col">
+            <input type="text" class="form-control" id="inputAddress" placeholder="Name">
+          </div>
+          <div class="form-group col">
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col">
+            <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone">
+          </div>
+          <div class="form-group col">
+            <input type="text" class="form-control" id="inputCity" placeholder="City">
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Project Details"></textarea>
+        </div>
+        <button type="submit" class="btn btn-red">Submit</button>
+      </form>
+    </section>
   </div>
 
-  <article class="instructor-container">
+  <footer>
+    <section class="main-container">
+      <div class="links">
+        <ul>
+          <h5>GENERAL</h5>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Portfolio</li>
+          <li>Blog</li>
+        </ul>
 
-    <figure class="instructor-figure1">
-      <img src="images/instructor-bio-image1.png" alt="Derek Jenkins">
-    </figure>
-    <div class="instructor1">
-      <h2>Derek Jenkins</h2>
-      <p> Derek is a Washington native and an experienced outdoorsman with many years hunting, fishing, skiing, canoeing, archery, shooting and minimalistic camping. His skillful mastery of bushcraft and wilderness survival knowledge helps define his character. He enjoys handcrafting his own long bows, flint knapped primitive arrows and making custom leather products.</p>
-    </div>
+        <ul>
+          <h5>CONTACT</h5>
+          <li><i class="fa fa-map-marker" style="font-size:1.5rem"></i>
+            <p>Seattle, WA</p>
+          </li>
+          <li><i class="fa fa-user" style="font-size:1.5rem"></i>
+            <p>Mans Thurfjell, P.E.</p>
+          </li>
+          <li><i class="fa fa-at" style="font-size:1.5rem"></i>
+            <p>mthurfjell@l120engineering.com</p>
+          </li>
+          <li><i class="fa fa-phone" style="font-size:1.5rem"></i>
+            <p>(206) 790-9502</p>
+          </li>
+        </ul>
 
-    <figure class="instructor-figure2">
-      <img src="images/instructor-bio-image2.png" alt="Amy Smith">
-    </figure>
-    <div class="instructor2">
-      <h2>Amy Smith</h2>
-      <p> Amy truly has a passion for archery. She comes from a long line of hunters, fisherman, and trappers of Canada. Amy  places a strong emphasis on safety and is enthusiastic about teaching. Amy also loves fitness, and  has been a YMCA group exercise and personal trainer for over 18 years.</p>
-    </div>
+        <div class="social">
+          <h5>SOCIAL</h5>
+          <i class="fa fa-facebook-square" style="font-size:2rem; margin-right: 0.5rem;"></i>
+          <i class="fa fa-linkedin-square" style="font-size:2rem; margin-right: 0.5rem;"></i>
+          <i class="fa fa-instagram" style="font-size:2rem"></i>
+        </div>
+      </div>
 
-    <figure class="instructor-figure3">
-      <img src="images/instructor-bio-image3.png" alt="Nathan Lee">
-    </figure>
-    <div class="instructor3">
-      <h2>Nathan Lee</h2>
-      <p> Nathan is an USA Archery Certified Level 3 NTS – Coach and has been teaching archery since 2009. He has been interested in archery since he nocked his first arrow while a Boy Scout at Scout camp. Nathan has many years of experience teaching people of all ages, experience gained as a Martial Arts Instructor and Studio Manager.</p>
-    </div>
-
-  </article>
-
-  <footer class="center">
-    <div class="footer-container">
-      <img src="images/logo.png" alt="logo picture">
-      <br>
-      <p class="footer_p">Aborpos nisto inci tet aut que volupti beruptiberro to ex</p>
-      <p class="footer_p">esseque invenienihil imaximu scideru ptistiusam consequunt</p>
-      <nav class="footer_nav">
-        <a href="index.html">link 1</a>
-        <a href="second-page.html">link 2</a>
-        <a href="second-page.html">link 3</a>
-        <a href="second-page.html">link 4</a>
-      </nav>
-      <p class="footer_p">© 2018 Archery, LLC | Seattle, WA</p>
-    </div>
+      <div class="copyright textcenter">
+        <p><img src="images/usflag.svg" alt="US Flag" /> Seattle, WA © 2020 L120 Structural Engineering, LLC</p>
+        <p>Site Design & Development by ZT Yang, P.E.</p>
+      </div>
+    </section>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="about.js"></script>
 </body>
+
 </html>
