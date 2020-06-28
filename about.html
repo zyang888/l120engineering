@@ -17,8 +17,9 @@
   <header id="header">
     <div class="main-container">
       <img id="headerlogo" src="images/logo.svg" alt="logo">
-      <section>
+      <section id="desktop-nav">
         <h5 id="headerphone">FREE CONSULTATION - (425) 636-3313</h5>
+        <!-- desktop nav -->
         <ul id="navbar" class="nav">
           <li class="nav-item">
             <a class="nav-link active" href="./index.html">HOME</a>
@@ -37,6 +38,37 @@
           </li>
         </ul>
       </section>
+      <!-- phone nav -->
+      <nav id="phone-nav" class="navbar navbar-light light-blue lighten-4">
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">BLOG</a>
+            </li>
+          </ul>
+          <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
+      </nav>
+      <!--/.Navbar-->
     </div>
     <hr />
   </header>
@@ -45,11 +77,14 @@
     <section class="main-container profile">
       <h1>About</h1>
       <article>
-        <img src="images/mans_thurfjell.png" alt="Mans Thurfjell Profile Picture">
+        <figure>
+          <img src="images/mans_thurfjell.png" alt="Mans Thurfjell Profile Picture">
+          <figcaption>Måns and wife, Gosia</figcaption>
+        </figure>
         <div>
-          <h3><a href="https://forvo.com/word/m%C3%A5ns/" target="_blank">Måns</a> Thurfjell</h3>
+          <h3><a href="https://forvo.com/word/m%C3%A5ns/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Pronunciation: M-on-s">Måns</a> Thurfjell</h3>
           <h4>Managing Partner/Founder of L120</h4>
-          <p><a href="https://forvo.com/word/m%C3%A5ns/" target="_blank">Måns</a> has over 20 years of Structural Engineering and Construction Administration experience. Since XXXX, Mans has created structural solutions for over 800 buildings and
+          <p>Måns has over 20 years of Structural Engineering and Construction Administration experience. Since XXXX, Mans has created structural solutions for over 800 buildings and
             homes in the
             greater Seattle area. Mans’s
             experience includes structural systems constructed of concrete, steel, wood, masonry and aluminum.

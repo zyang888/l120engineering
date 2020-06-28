@@ -16,8 +16,9 @@
   <header id="header">
     <div class="main-container">
       <img id="headerlogo" src="images/logo.svg" alt="logo">
-      <section>
+      <section id="desktop-nav">
         <h5 id="headerphone">FREE CONSULTATION - (425) 636-3313</h5>
+        <!-- desktop nav -->
         <ul id="navbar" class="nav">
           <li class="nav-item">
             <a class="nav-link active" href="./index.html">HOME</a>
@@ -36,6 +37,37 @@
           </li>
         </ul>
       </section>
+      <!-- phone nav -->
+      <nav id="phone-nav" class="navbar navbar-light light-blue lighten-4">
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">BLOG</a>
+            </li>
+          </ul>
+          <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
+      </nav>
+      <!--/.Navbar-->
     </div>
     <hr />
   </header>
@@ -74,7 +106,7 @@
 
     <section class="main-container intro">
       <h1>Seattle structural engineers</h1>
-      <div class="introsection">
+      <div>
         <img src="images/grouppicture.jpg" alt="Structural Engineer Group Picture" />
         <article>
           <p>For over 20 years, L120 structural engineering has worked on over 1000 buildings and homes. We are a team of structural engineers with expertise in both commercial and residential builds in the Seattle metropolitan area. From the
@@ -91,7 +123,7 @@
       <a class="btn btn-red" href="#" role="button">ABOUT</a>
     </section>
 
-    <hr class="intro" />
+    <hr />
 
     <section class="main-container services">
       <h2>Structural Engineering Services</h2>
