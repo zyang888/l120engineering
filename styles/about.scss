@@ -1,11 +1,9 @@
 $breakpoint-small: 768px;
 $breakpoint-medium: 960px;
 
-h1,
-h2 {
-  margin: auto;
+h1,h2 {
+  margin: 0 auto 1rem;
   text-align: center;
-  padding-bottom: 2rem;
 }
 
 figcaption {
