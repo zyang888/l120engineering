@@ -1,4 +1,5 @@
 $breakpoint-small: 768px;
+$breakpoint-medium: 960px;
 
 h1,
 h2 {
@@ -41,7 +42,7 @@ figcaption {
   }
 }
 
-@media only screen and (max-width: $breakpoint-small) {
+@media only screen and (max-width: $breakpoint-medium) {
   article {
     display: flex;
     flex-direction: column;
