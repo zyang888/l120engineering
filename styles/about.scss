@@ -44,6 +44,9 @@ figcaption {
   article {
     display: flex;
     flex-direction: column;
+    div {
+      margin-top: 1rem;
+    }
   }
   .profile {
     img {
@@ -51,6 +54,7 @@ figcaption {
     width: 100%;
     padding: 0 0;
   }
+
 }
 }
 
