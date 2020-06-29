@@ -9,11 +9,22 @@
   --color_grey: rgb(32, 40, 43);
 }
 
+$breakpoint-small: 768px;
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 h1,
@@ -92,7 +103,7 @@ header {
   z-index: 110;
 }
 
-header div {
+header .main-container {
   display: flex;
   justify-content: space-between;
   padding: 0.8rem 0;
@@ -109,7 +120,7 @@ header div {
   color: var(--color_blue);
 }
 
-header section {
+#desktop-nav {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -143,15 +154,23 @@ header hr {
   display: none;
 }
 
-@media only screen and (max-width: 900px) {
-  #desktop-nav {
+@media only screen and (max-width: $breakpoint-small) {
+  header {
+    position: relative;
+    .main-container {
+      width: 100%;
+      background-image: url("../images/logo.svg");
+      background-size: auto 70px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  #desktop-nav,
+  #headerlogo {
     display: none;
   }
   #phone-nav {
     display: flex;
-  }
-  header {
-    position: relative;
   }
   #content {
     margin-top: 0 !important;
@@ -183,6 +202,7 @@ header hr {
   padding: 2rem 0;
   img {
     width: 45%;
+    object-fit: cover;
   }
   h1 {
     margin: auto;
@@ -207,8 +227,10 @@ header hr {
   }
 }
 
-@media only screen and (max-width: 900px) {
-  .intro article {width: 100%}
+@media only screen and (max-width: $breakpoint-small) {
+  .intro article {
+    width: 100%;
+  }
   .intro img {
     margin-bottom: 1rem;
     width: 100%;
@@ -219,14 +241,15 @@ header hr {
 # service
 --------------------------------------------------------------*/
 
-section.services {
+.services {
   padding: 2rem 0;
   text-align: center;
 }
 
 .cardsection {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
 }
@@ -240,7 +263,8 @@ section.services {
     text-align: left;
     margin-bottom: 1rem;
   }
-  h2,h3 {
+  h2,
+  h3 {
     margin-bottom: 1rem;
   }
   a {
@@ -254,6 +278,14 @@ section.services {
     margin-bottom: 1rem;
   }
 }
+
+@media only screen and (max-width: $breakpoint-small) {
+  .card {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+}
+
 /*--------------------------------------------------------------
 # portfolio
 --------------------------------------------------------------*/
@@ -286,6 +318,16 @@ section.services {
   }
 }
 
+.portfolio-card:hover {
+  .overlay {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .text {
+    opacity: 1;
+  }
+}
+
 .overlay {
   position: absolute;
   top: 0.5rem;
@@ -295,16 +337,6 @@ section.services {
   opacity: 0;
   transition: 1s ease;
   background-color: var(--color_grey);
-}
-
-.portfolio-card:hover {
-  .overlay {
-    opacity: 0.5;
-    cursor: pointer;
-  }
- .text {
-    opacity: 1;
-  }
 }
 
 .text {
@@ -319,6 +351,12 @@ section.services {
   border-bottom: 2px solid white;
   opacity: 0;
   transition: 1s ease;
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+  .portfolio-card {
+    width: 100%;
+  }
 }
 
 /*--------------------------------------------------------------

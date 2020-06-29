@@ -1,3 +1,5 @@
+$breakpoint-small: 768px;
+
 h1,
 h2 {
   margin: auto;
@@ -5,6 +7,9 @@ h2 {
   padding-bottom: 2rem;
 }
 
+figcaption {
+  text-align: center;
+}
 .profile,
 .team {
   padding: 2rem 0;
@@ -13,7 +18,7 @@ h2 {
 .profile {
   article {
     display: flex;
-
+    flex-wrap: wrap;
   }
   h3 {
     text-transform: none;
@@ -34,6 +39,14 @@ h2 {
     height: 20rem;
     object-fit: cover;
     margin-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+  .profile img {
+    height: 20rem;
+    width: 100%;
+    padding: 0 0;
   }
 }
 
@@ -103,4 +116,16 @@ h2 {
 
 .teamcard:hover .text {
   opacity: 1;
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+  .teamcard {
+    width: 47%;
+    img {
+      height: 16rem;
+    }
+    .overlay {
+      height: 20rem;
+    }
+  }
 }
