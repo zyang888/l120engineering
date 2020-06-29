@@ -432,7 +432,7 @@ ul i {
   vertical-align: middle;
 }
 
-@media only screen and (max-width: $breakpoint-small) {
+@media only screen and (max-width: 950px) {
   .links {
     flex-direction: column;
   }
@@ -440,7 +440,9 @@ ul i {
     text-align: left;
     margin: 0 0 1.5rem;
   }
-.copyright {flex-direction: column;}
+  .copyright {
+    flex-direction: column;
+  }
 }
 
 /*--------------------------------------------------------------
