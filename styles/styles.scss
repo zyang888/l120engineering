@@ -11,6 +11,7 @@
 
 $breakpoint-small: 768px;
 $breakpoint-medium: 960px;
+$breakpoint-maxwidth: 960px;
 
 a[href^="tel"] {
   color: inherit; /* Inherit text color of parent element. */
@@ -90,6 +91,23 @@ i {
   color: white;
   background-color: var(--color_red);
   border-color: var(--color_red);
+}
+
+.btn-white {
+  font-weight: bold;
+  margin-top: 2rem;
+  color: white;
+  background-color: var(--color_red);
+  border-color: var(--color_red);
+  border-radius: 0;
+  width: 10rem;
+  border-width: medium;
+}
+
+.btn-white:hover {
+  color: var(--color_red);
+  background-color: white;
+  border-color: white;
 }
 
 hr {
@@ -195,7 +213,8 @@ header hr {
 }
 
 .carousel-caption {
-  bottom: 100px;
+  top: 50%;
+  transform: translateY(-50%);
   h5 {
     font-size: 3rem;
   }
@@ -381,10 +400,34 @@ header hr {
   h2 {
     margin-bottom: 1rem;
   }
+  button {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 form {
   margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.name, .email, .phone, .city {
+  padding: 0 5px;
+  display: inline-block;
+  width: 50%;
+}
+
+.details {
+  padding: 0 5px;
+  display: inline-block;
+  width: 100%;
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+  .name, .email, .phone, .city {
+    width: 100%;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -467,4 +510,5 @@ ul i {
 .main-container {
   width: 80%;
   margin: auto;
+  max-width: $breakpoint-maxwidth;
 }

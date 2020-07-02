@@ -27,7 +27,7 @@
           <!-- Links -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="./index.html">HOME</a>
+              <a class="nav-link" href="./">HOME</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./about.html">ABOUT</a>
@@ -38,9 +38,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#">PORTFOLIO</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">BLOG</a>
-            </li> -->
           </ul>
           <!-- Links -->
         </div>
@@ -64,9 +61,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#">PORTFOLIO</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">BLOG</a>
-          </li> -->
         </ul>
       </section>
 
@@ -113,23 +107,20 @@
       <h2>Send us a message</h2>
       <p>Please use the form below to contact us. Our engineers will get back to you ASAP. We look forward to learning more about you, your project, or anything we can help you with. </p>
       <form name="contact" method="POST" data-netlify="true">
-        <div class="form-row">
-          <div class="form-group col">
-            <input type="text" class="form-control" id="inputAddress" placeholder="Name">
-          </div>
-          <div class="form-group col">
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-          </div>
+        <div class="form-group name">
+          <input type="text" class="form-control" id="inputAddress" placeholder="Name">
         </div>
-        <div class="form-row">
-          <div class="form-group col">
-            <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone">
-          </div>
-          <div class="form-group col">
-            <input type="text" class="form-control" id="inputCity" placeholder="City">
-          </div>
+        <div class="form-group email">
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
         </div>
-        <div class="form-group">
+        <div class="form-group phone">
+          <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone (Optional)">
+        </div>
+        <div class="form-group city">
+          <input type="text" class="form-control" id="inputCity" placeholder="City">
+        </div>
+
+        <div class="form-group details">
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Project Details"></textarea>
         </div>
         <button type="submit" class="btn btn-red">Submit</button>
