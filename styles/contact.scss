@@ -1,0 +1,42 @@
+$breakpoint-small: 768px;
+$breakpoint-medium: 960px;
+
+h1.display-4 {
+  margin: 0 auto 1rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+p {
+  text-align: center;
+}
+
+.jumbotron {
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../images/jumbotronimg.jpg);
+  background-size: cover;
+  filter: 50%
+}
+
+.container {
+  h1,
+  p {
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+  .contact {
+    flex-direction: column;
+  }
+}

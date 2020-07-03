@@ -107,7 +107,7 @@ i {
 .btn-white:hover {
   color: var(--color_red);
   background-color: white;
-  border-color: white;
+  border-color: var(--color_red);
 }
 
 hr {
